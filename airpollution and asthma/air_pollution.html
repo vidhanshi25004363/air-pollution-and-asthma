@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Pollution Data</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">🌬️ CleanAir</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="air_pollution.html" class="active">Air Pollution</a></li>
+                <li><a href="asthma.html">Asthma</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="tools.html">Tools</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pollutant-data card-section">
+            <h2>Real-Time Pollutant Breakdown</h2>
+            <p>Data simulated. Replace with real API calls in **script.js**.</p>
+            <div id="real-time-cards" class="card-layout">
+                <div class="pollutant-card"><h3>PM2.5</h3><p class="level high">48 µg/m³</p><p class="description">Fine Particulate Matter</p></div>
+                <div class="pollutant-card"><h3>PM10</h3><p class="level medium">75 µg/m³</p><p class="description">Coarse Particulate Matter</p></div>
+                <div class="pollutant-card"><h3>NO₂</h3><p class="level low">15 ppb</p><p class="description">Nitrogen Dioxide</p></div>
+                <div class="pollutant-card"><h3>SO₂</h3><p class="level low">4 ppb</p><p class="description">Sulfur Dioxide</p></div>
+                <div class="pollutant-card"><h3>O₃</h3><p class="level medium">35 ppb</p><p class="description">Ozone</p></div>
+            </div>
+        </section>
+
+        <section class="pollution-trends card-section">
+            <h2>Pollution Trends (Last 7 Days)</h2>
+            <div class="chart-container">
+                <canvas id="pollution-chart"></canvas> 
+            </div>
+            
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Chart.js graph on load
+        document.addEventListener('DOMContentLoaded', initializePollutionChart);
+    </script>
+</body>
+</html>
